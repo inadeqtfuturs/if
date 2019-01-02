@@ -1,7 +1,7 @@
 ---
 title: "[00 - blog relaunch]"
 author: "alex christie"
-date: 2018-12-22T11:59:05-06:00
+date: 2019-01-02T10:59:05-06:00
 type: "code"
 image: 
 display: false
@@ -62,4 +62,4 @@ While I'm only querying my own markdown files, GraphQL *can* be used with other 
 
 I rewrote *inadequate futures* to integrate some of the lessons I learned about javascript, react, and component composition over the past year or so. I'm currently at work putting this knowledge into practice by porting the [Jekyll theme Ed](https://elotroalex.github.io/ed/) over to Gatsby with the sense that editors would be interested in integrating some of the above advantages of the modern JAMStack into their minimal editions and other humanities projects. I see this as an effort to contribute to both digital humanistic inquiry and add to the growing number of Gatsby starters.
 
-I made this section of the website to start documenting some of my experiences with Gatsby, React, and web development. If you'd like to talk about static site generators, Gatsby, or [my research](www.inadequatefutures.com), don't hesitate to reach out on [twitter](https://twitter.com/inadeqt_futurs) or via email (alexj [dot] christie [at] gmail [dot] com).
+I made this section of the website to start documenting some of my experiences with Gatsby, React, and web development. If you'd like to talk about static site generators, Gatsby, or [my research](https://www.inadequatefutures.com), don't hesitate to reach out on [twitter](https://twitter.com/inadeqt_futurs) or via email (alexj [dot] christie [at] gmail [dot] com).

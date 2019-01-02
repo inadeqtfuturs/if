@@ -21,6 +21,8 @@ const global = injectGlobal`
   h1, h2, h3, h4 {
     font-family: var(--fontFamily);
     font-weight: 100;
+    line-height: 1;
+    margin-bottom: .5rem;
   }
   p, a, li, td {
     font-family: var(--fontFamilyPara);
