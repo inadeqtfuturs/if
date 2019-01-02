@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Main from '../components/Main';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Main from '../components/main';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 export default () => {
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
-import Page from '../components/Page';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Page from '../components/page';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 export default ({ data }) => {
   const {

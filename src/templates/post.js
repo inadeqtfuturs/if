@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
-import Main from '../components/Main';
-import Post from '../components/Post';
-import PostPagination from '../components/PostPagination';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import TagList from '../components/TagList';
+import Main from '../components/main';
+import Post from '../components/post';
+import PostPagination from '../components/postPagination';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import TagList from '../components/tagList';
 
 export default ({ data }) => {
 

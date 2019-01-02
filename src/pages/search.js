@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby';
 
-import Main from '../components/Main';
-import Layout from '../components/Layout';
-import PostExcerpt from '../components/PostExcerpt';
-import SEO from '../components/SEO';
+import Main from '../components/main';
+import Layout from '../components/layout';
+import PostExcerpt from '../components/postExcerpt';
+import SEO from '../components/seo';
 
 const searchingFor = term => {
   return function(x) {

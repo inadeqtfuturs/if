@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Archive from '../components/Archive';
-import Main from '../components/Main';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Archive from '../components/archive';
+import Main from '../components/main';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const ArchivePage = ({ data }) => {
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import IndexPagination from '../components/IndexPagination';
-import Main from '../components/Main';
-import Layout from '../components/Layout';
-import PostExcerpt from '../components/PostExcerpt';
-import SEO from '../components/SEO';
+import IndexPagination from '../components/indexPagination';
+import Main from '../components/main';
+import Layout from '../components/layout';
+import PostExcerpt from '../components/postExcerpt';
+import SEO from '../components/seo';
 
 export default function Pages ({ pageContext }) {
   const { posts, prevPath, nextPath } = pageContext;

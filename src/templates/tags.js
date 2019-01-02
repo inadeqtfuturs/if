@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Main from '../components/Main';
-import Layout from '../components/Layout';
-import PostExcerpt from '../components/PostExcerpt';
-import SEO from '../components/SEO';
-import TagPagination from '../components/TagPagination';
+import Main from '../components/main';
+import Layout from '../components/layout';
+import PostExcerpt from '../components/postExcerpt';
+import SEO from '../components/seo';
+import TagPagination from '../components/tagPagination';
 
 export default ({ pageContext }) => {
   const { posts, tag, pagesSum, page } = pageContext;
