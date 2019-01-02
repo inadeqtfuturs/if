@@ -10,8 +10,11 @@ const Menu = props => {
   return (
     <nav className={themeStyle}>
       <ul>
-        {items.map(item => 
-          <MenuItem item={item} />
+        {items.map((item, index) => 
+          <MenuItem 
+            key={index}
+            item={item} 
+          />
         )}
       </ul>
     </nav>

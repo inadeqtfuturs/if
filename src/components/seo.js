@@ -11,7 +11,7 @@ const SEO = props => {
   const description = props.description || 'posthumanism and ethics for enacting the future';
   const keywords = props.tags + ',alex christie,chicago'
   || 'critical theory, posthumanism, new materialism, alex christie, chicago';
-  const image = props.image ? props.image.publicURL : profile;
+  const image = props.image ? baseUrl + props.image.publicURL : profile;
   const url = baseUrl + props.slug;
 
   return (
