@@ -1,0 +1,15 @@
+---
+title: "[003 - emerging from the contemporary]"
+author: "alex christie"
+date: 2017-05-12T08:28:56-06:00
+type: "post"
+tags: ["contemporary", "posthuman", "posthumanism", "theory"]
+draft: false
+---
+One thing I'm having trouble articulating and working through in the dissertation proposal is the extent to which posthumanism and posthuman subjectivity (interrelated but definitely not coterminous) are either local and site specific or transcendent and ontological. It's clear to me how posthumanism as a discourses arises in the latter half of the 20th century: globalization, transnationalism, and the onset of network culture force us to think differently about how humans are connected. The cellphone (and really, the smartphone) shifts attention away from the human body to the human with(in) a network. The smartphone has become a very literal and felt extension of one kind of cyborg subjectivity. In this way, it's like what Nathan Jurgenson says about identity performance: 'Social media surely change identity performance. For one, it makes the process more explicit' ('[The Disconnectionists](https://thenewinquiry.com/the-disconnectionists/)'). Our imbrication in technology makes explicit something we might have missed before---how the human and tool are woven together into assemblages or amalgams---but that then seems ontologically grounded.
+
+<!--more-->
+
+Theories of performativity and discipline get to swerve around this issue to an extent because they're interested (genealogically) in very specific moments and modes of subjectivity. And I'm trying to make a similar kind of periodizing argument about the inadequacy of the liberal human as a model for understanding subjectivity in the 21st century (low hanging fruit to be sure). But to what extent do these arguments about intra-activity extend beyond this specific historical, social, and cultural moment? In Barad, at least back to when Bohr was working through his theory of quantum physics, but what about further back? And what are the consequences for reading this theoretical framework backwards?
+
+At stake here is a kind of recognition of our mutual contingency with(in) (non)human subjects. I'm trying to foreground how liberal humanism and fantasies of unified bodies inhibit our ability to recognize our fragmentary being. Unless we're able to confront our intra-active becoming and affirm the reality of our situation---not just of subjectivity, but the crises that surround and produce our subjectivity---there cannot be a future in which the human remains. Perhaps the division between subjectivity and discourse is enough, But I still feel the anxiety of making an ontological argument, knowing how contingent these kind of descriptions are. I’m trying to embrace the ephemerality and contingency of these kind of frameworks, especially since maintaining the transcendence of any theory seems exceedingly humanistic and hubristic. Maybe inhabiting that space between skepticism, nihilism, and anxiety is where the project needs to float.
