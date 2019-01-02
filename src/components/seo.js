@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import Icon from '../../content/images/favicon.ico'
+import icon from '../../content/images/favicon.ico'
 import profile from '../../content/images/profile.jpg'
 
 const SEO = props => {
@@ -37,7 +37,7 @@ const SEO = props => {
       ]}
     >
       <html lang="en" />
-      <link rel="shortcut icon" href={Icon} />
+      <link rel="shortcut icon" href={icon} />
       <link  href="https://use.fontawesome.com/releases/v5.1.0/css/svg-with-js.css" rel="stylesheet" />
     </Helmet>
   );

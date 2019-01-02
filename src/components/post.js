@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Figure from './Figure';
+import Figure from './figure';
 
 import style from './styles/post';
 

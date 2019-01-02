@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import TagList from './TagList';
+import TagList from './tagList';
 
 import style from './styles/postExcerpt';
 

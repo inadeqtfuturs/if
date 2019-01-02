@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Branding from './Branding';
-import Footer from './Footer';
-import FooterArchive from './FooterArchive';
-import FooterSearch from './FooterSearch';
-import Header from './Header';
-import Menu from './Menu';
+import Branding from './branding';
+import Footer from './footer';
+import FooterArchive from './footerArchive';
+import FooterSearch from './footerSearch';
+import Header from './header';
+import Menu from './menu';
 
 import './styles/variables';
 import './styles/global';
