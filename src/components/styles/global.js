@@ -64,13 +64,13 @@ const global = injectGlobal`
   *::-webkit-scrollbar-thumb {
     background-color: var(--scrollBarThumb);
   }
-  /* Prism highlighting */
 
+  /* Prism highlighting */
   /* Code blocks */
   pre[class*="language-"] {
-    margin-bottom: 1rem;
     ${mq({
-      fontSize: ['.75rem', '.85rem']
+      fontSize: ['.65rem', '.75rem'],
+      margin: ['0 0 1rem 0', '0 2rem 1rem 2rem']
     })}
   }
 
@@ -78,7 +78,7 @@ const global = injectGlobal`
   :not(pre) > code[class*="language-"] {
     padding: .1em .5em;
     ${mq({
-      fontSize: ['.75rem', '.85rem']
+      fontSize: ['.65rem', '.75rem']
     })}
   }
 `;

@@ -7,23 +7,27 @@ const config = {
   siteTitle: 'inadequate futures',
   siteDescription: 'posthumanism and ethics for enacting the future',
   siteKeywords: 'critical theory, posthumanism, new materialism, alex christie, chicago',
-  siteImage: ' ', // GLOBAL IMAGE GOES HERE
 }
 
 const menu = [
-  { type: 'text', label: 'home', to: '/' },
-  { type: 'text', label: 'about', to: '/about' },
-  { type: 'text', label: 'teaching', to: '/teaching', subItems: [
-    { type: 'text', label: 'teaching philosophy', to: '/teaching' },
-    { type: 'text', label: 'course descriptions', to: '/classes' },
+  { label: 'home', to: '/' },
+  { label: 'about', to: '/about' },
+  { label: 'teaching', to: '/teaching', subItems: [
+    { label: 'teaching philosophy', to: '/teaching' },
+    { label: 'course descriptions', to: '/classes' },
   ]},
-  { type: 'text', label: 'cv', to: '/cv' },
-  { type: 'text', label: 'code', to: '/code' },
-  { type: 'icon', label: 'twitter', to: 'https://www.twitter.com/inadeqt_futurs' },
-  { type: 'icon', label: 'instagram', to: 'https://www.instagram.com/if_exp/' }
+  { label: 'cv', to: '/cv' },
+  { label: 'code', to: '/code' },
+]
+
+const social = [
+  { label: 'twitter', to: 'https://www.twitter.com/inadeqt_futurs' },
+  { label: 'instagram', to: 'https://www.instagram.com/if_exp/' },
+  { label: 'github', to: 'https://github.com/inadeqtfuturs' }
 ]
 
 module.exports = {
   config: config,
-  menu: menu
+  menu: menu,
+  social: social
 }

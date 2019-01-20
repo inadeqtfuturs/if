@@ -61,6 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
         blogCode: allMarkdownRemark(
+          sort: {fields: [frontmatter___date], order: DESC },
           filter: { frontmatter: { type: { eq: "code" } } }
         ) {
           edges {

@@ -1,12 +1,14 @@
 import { css } from 'emotion';
 import facepaint from 'facepaint';
 
-const breakpoints = [40];
+const breakpoints = [50];
 const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
 
 const footerSearch = css`
-  width: 40%;
-  max-width: 100%;
+  ${mq({
+    gridColumn: ['1/4', '1/2'],
+    marginBottom: ['1rem', '']
+  })};
   h4 {
     margin-bottom: 0;
     height: 24px;
@@ -14,11 +16,12 @@ const footerSearch = css`
   input {
     border-width: 0;
     border-bottom: 1px solid #666;
-    width: 16rem;
+    width: 14rem;
     max-width: 100%;
     ${mq({
       fontSize: ['.85rem', '1rem']
     })};
+    font-family: var(--fontFamilyPara);
     font-style: italic;
   };
   input:focus {

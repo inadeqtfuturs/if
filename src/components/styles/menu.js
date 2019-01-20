@@ -1,14 +1,14 @@
 import { css } from 'emotion';
 import facepaint from 'facepaint';
 
-const breakpoints = [40, 50, 62, 80];
+const breakpoints = [50];
 const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
 
 const menu = css`
   display: flex;
   align-items: center;
   ${mq({
-    justifyContent: ['center', 'center', 'flex-end', 'flex-end', 'flex-end'],
+    justifyContent: ['center', 'flex-end'],
   })};
   ul {
     list-style: none;

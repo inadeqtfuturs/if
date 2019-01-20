@@ -28,5 +28,4 @@ This roundtable invites papers that explore the ethics of the relationships and 
   - How can we cultivate more humane working and learning conditions for both students and instructors?
   - How can we build community within and beyond the classroom and the institution?
 
-<br />
 Please send ~250 word abstracts to Alex Christie (achristie1@luc.edu) and Katie Dyson (kdyson@luc.edu) by March 15th.

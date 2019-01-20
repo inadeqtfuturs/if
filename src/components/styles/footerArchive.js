@@ -1,8 +1,14 @@
 import { css } from 'emotion';
+import facepaint from 'facepaint';
+
+const breakpoints = [50];
+const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
 
 const footerSearch = css`
-  width: 40%;
-  max-width: 100%;
+  ${mq({
+    gridColumn: ['1/4', '3/4'],
+    marginBottom: ['1rem', '']
+  })};
   h4 {
     margin-bottom: 0;
     height: 24px;
