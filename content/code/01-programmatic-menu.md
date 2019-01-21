@@ -5,7 +5,7 @@ date: 2019-01-20T12:49:34-6:00
 type: "code"
 image: 
 display: false
-tags: ["Gatsby", "Coding", "React", "Menu", "Navigation"]
+tags: ["gatsby", "coding", "react", "menu", "navigation"]
 draft: true
 ---
 Programmatically generating menus is a difficult concept at first because it seems simple enough just to hardcode your menu into a component. However, making a reusable and data agnostic menu component is really easy and can travel with you from project to project. Here, I want to outline two approaches to generating menus from your data. The first involves defining menu items in markdown frontmatter, which can be useful when designing sites for folks less familiar with javascript or coding more generally. The second is an iteration on the current Gatsby documentation that skips using GraphQL fragments in favor of a meta config file.
@@ -175,3 +175,7 @@ So, what's happening here?
 - The second half of the ternary just gives us a standard Link nested in a list item.
 
 I like this approach because it gives us the separation of concerns that Gatsby's documentation recommends without having to write a static GraphQL query. Additionally, the example above should give you an idea of how to start working with sub-menus, which is absent in the current Gatsby documentation. Check out [my Github](https://github.com/inadeqtfuturs/if/blob/master/src/components/styles/menu.js) for styling.
+
+### Wrap Up
+
+I hope these two models of dealing with menus provide useful examples for folks working on their own Gatsby projects. In future iterations of these menu designs, I'd like to work on rendering a collapsible (hamburger) menu for mobile.
