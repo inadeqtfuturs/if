@@ -103,7 +103,7 @@ If you're looking for a simple way to generate single level menus, this is a rea
 
 The approach I ended up taking was siloing metadata about the site into a siteConfig file. Here, I define some site wide settings, and map out my menu. While this can be done in `gatsby-config.js` (and Gatsby docs even offer this as a solution for [mapping programmatic menus](https://www.gatsbyjs.org/docs/centralizing-your-sites-navigation/)), I decided to forego writing another GraphQL fragment of just use an object with some arrays. So the main difference and benefit here is just slimmer syntax at the cost of passing the object through the top level layout component.
 
-There are two parts of this setup: the `siteConfig.js` file, and the menu components. I keep my siteConfig in `content/meta`, though it could be stored anywhere. Here, I define my menu with a series of arrays listing the item label, and the page we're navigating to. Additionally, I wanted to be able to define sub-menu items, so I giving 'teaching' a subItems object with arrays that are constructed the same way as the top-level arrays:
+There are two parts of this setup: the `siteConfig.js` file, and the menu components. I keep my siteConfig in `content/meta`, though it could be stored anywhere. Here, I define my menu with a series of objects listing the item label, and the page we're navigating to. Additionally, I wanted to be able to define sub-menu items, so I giving 'teaching' a subItems array with objects that are constructed the same way as the top-level objects:
 
 ``` javascript
 const menu = [
@@ -125,9 +125,9 @@ module.exports = {
 }
 ```
 
-The final bit of code here is just exporting a bunch of objects from `siteConfig.js`, but we're just looking at menu for now.
+The final bit of code here is just exporting a bunch of arrays from `siteConfig.js`, but we're just looking at menu for now.
 
-The second part is my `menu.js` and `menuItem.js` component. `menu.js` simply maps the object into the `menuItem.js` component. This is where we use the arrays to define and programmatically generate out menu:
+The second part is my `menu.js` and `menuItem.js` component. `menu.js` simply maps the array into the `menuItem.js` component. This is where we use the arrays to define and programmatically generate out menu:
 
 ``` javascript
 import React from 'react';
