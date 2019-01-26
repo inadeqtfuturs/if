@@ -46,8 +46,8 @@ module.exports = {
         name: 'inadequate-futures',
         short_name: 'if',
         start_url: '/',
-        background_color: '#222',
-        theme_color: '#222',
+        background_color: '#111',
+        theme_color: '#111',
         display: 'minimal-ui',
         icon: 'content/images/icon.png', // This path is relative to the root of the site.
       },
