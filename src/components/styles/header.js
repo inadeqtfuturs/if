@@ -6,12 +6,12 @@ const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
 
 const header = css`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 2rem auto .5rem auto;
-  align-items: center;
   ${mq({
-    flexDirection: ['column', 'row', 'row', 'row', 'row'],
-    justifyContent: ['center', 'space-between', 'space-between', 'space-between', 'space-between'],
-    width: ['null', '38rem', '48rem', '58rem', '74rem'],
+    alignItems: ['baseline', 'center', 'center', 'center', 'center'],
+    width: ['100%', '38rem', '48rem', '58rem', '74rem'],
   })};
   a {
     text-decoration: none;

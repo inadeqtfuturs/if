@@ -1,10 +1,14 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
 import { css } from 'emotion';
 import facepaint from 'facepaint';
 
 const Figure = props => {
   const { image, width } = props;
+
+  console.log(typeof(image))
+  console.log(typeof(width))
 
   const breakpoints = [30, 40, 62];
   const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
@@ -25,6 +29,11 @@ const Figure = props => {
       />
     </figure>
   );
+};
+
+Figure.propTypes = {
+  image: PropTypes.object,
+  width: PropTypes.string,
 };
 
 export default Figure;

@@ -1,5 +1,5 @@
 ---
-title: "[01 - Programmatic Menus in Gatsby]"
+title: "[01 - programmatic menus in Gatsby]"
 author: "alex christie"
 date: 2019-01-20T12:49:34-6:00
 type: "code"

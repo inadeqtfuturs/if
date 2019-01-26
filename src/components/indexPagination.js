@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import style from './styles/indexPagination';
 
-const indexPagination = props => {
+const IndexPagination = props => {
   const { prevPath, nextPath, themeStyle=style } = props;
 
   return (
@@ -24,4 +25,9 @@ const indexPagination = props => {
   );
 };
 
-export default indexPagination;
+IndexPagination.propTypes = {
+  prevPath: PropTypes.string,
+  nextPath: PropTypes.string,
+};
+
+export default IndexPagination;

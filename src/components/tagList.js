@@ -15,8 +15,7 @@ const TagList = ({ tags }, props) => {
       {tags.sort(function(a,b) {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if( a === b) return 0;
-        return a < b ? -1 : 1;
+        return (a < b) ? -1 : (a > b) ? 1 : 0;
       }).map((tag, index, arr) => {
         return (
           <li key={index}>
