@@ -24,7 +24,7 @@ const Footer = props => {
           <FontAwesomeIcon icon={['fab', 'codepen']} size='lg' />
         </a>
       </section>
-      <a href='/'>contact</a>
+      <a href='mailto:alexj.christie@gmail.com'>contact</a>
     </footer>
   );
 };
