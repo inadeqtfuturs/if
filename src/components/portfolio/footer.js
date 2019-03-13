@@ -14,13 +14,19 @@ const Footer = props => {
   return (
     <footer className={themeStyle}>
       <section>
-        <a href='https://www.twitter.com/inadeqt_futurs'>
+        <a 
+          href='https://www.twitter.com/inadeqt_futurs'
+          aria-label='twitter'>
           <FontAwesomeIcon icon={['fab', 'twitter']} size='lg' />
         </a> 
-        <a href='https://github.com/inadeqtfuturs'>
+        <a 
+          href='https://github.com/inadeqtfuturs'
+          aria-label='github'>
           <FontAwesomeIcon icon={['fab', 'github']} size='lg' />
         </a>
-        <a href='https://codepen.io/inadequatefutures/'>
+        <a 
+          href='https://codepen.io/inadequatefutures/'
+          aria-label='codepen'>
           <FontAwesomeIcon icon={['fab', 'codepen']} size='lg' />
         </a>
       </section>
