@@ -24,104 +24,101 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  return new Promise((resolve) => {
-    graphql(`
-      {
-        blogPosts: allMarkdownRemark(
-          sort: {fields: [frontmatter___date], order: DESC },
-          filter: { frontmatter: { type: { eq: "post" } } }
-        ) {
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                author
-                date(formatString: "MMMM DD, YYYY")
-                type
-                tags
-              }
-              fields {
-                slug
-                year(formatString: "YYYY")
-              }
-              html
-              excerpt(format: PLAIN)
+  return graphql(`
+    {
+      blogPosts: allMarkdownRemark(
+        sort: {fields: [frontmatter___date], order: DESC },
+        filter: { frontmatter: { type: { eq: "post" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              author
+              date(formatString: "MMMM DD, YYYY")
+              type
+              tags
             }
-            previous {
-              fields {
-                slug
-              }
+            fields {
+              slug
+              year(formatString: "YYYY")
             }
-            next {
-              fields {
-                slug
-              }
+            html
+            excerpt(format: PLAIN)
+          }
+          previous {
+            fields {
+              slug
             }
           }
-        }
-        blogCode: allMarkdownRemark(
-          sort: {fields: [frontmatter___date], order: DESC },
-          filter: { frontmatter: { type: { eq: "code" } } }
-        ) {
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                author
-                date(formatString: "MMMM DD, YYYY")
-                type
-                tags
-              }
-              fields { 
-                slug
-              }
-              html
-              excerpt(format: PLAIN)
-            }
-            previous {
-              fields {
-                slug
-              }
-            }
-            next {
-              fields {
-                slug
-              }
-            }
-          }
-        }
-        blogPages: allMarkdownRemark(
-          filter: { frontmatter: { type: { eq: "page" } } }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                type
-              }
-              fields {
-                slug
-              }
+          next {
+            fields {
+              slug
             }
           }
         }
       }
-    `).then(result => {
-      //page or post?
-      const blogPosts = result.data.blogPosts.edges;
-      const blogCode = result.data.blogCode.edges;
-      const blogPages = result.data.blogPages.edges;
-      //build pages, posts, tags, and index.
-      generatePost(createPage, blogPosts);
-      generatePost(createPage, blogCode);
-      generatePage(createPage, blogPages);
-      generateTagPages(createPage, blogPosts);
-      generateTagPages(createPage, blogCode);
-      createPagination(createPage, blogPosts, '/page')
-      createPaginationCode(createPage, blogCode, '/code')
-    });
-    resolve();
+      blogCode: allMarkdownRemark(
+        sort: {fields: [frontmatter___date], order: DESC },
+        filter: { frontmatter: { type: { eq: "code" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              author
+              date(formatString: "MMMM DD, YYYY")
+              type
+              tags
+            }
+            fields { 
+              slug
+            }
+            html
+            excerpt(format: PLAIN)
+          }
+          previous {
+            fields {
+              slug
+            }
+          }
+          next {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      blogPages: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "page" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              type
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    //page or post?
+    const blogPosts = result.data.blogPosts.edges;
+    const blogCode = result.data.blogCode.edges;
+    const blogPages = result.data.blogPages.edges;
+    //build pages, posts, tags, and index.
+    generatePost(createPage, blogPosts);
+    generatePost(createPage, blogCode);
+    generatePage(createPage, blogPages);
+    generateTagPages(createPage, blogPosts);
+    generateTagPages(createPage, blogCode);
+    createPagination(createPage, blogPosts, '/page')
+    createPaginationCode(createPage, blogCode, '/code')
   });
 };
 

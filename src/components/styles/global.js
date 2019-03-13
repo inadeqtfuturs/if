@@ -55,15 +55,6 @@ const global = injectGlobal`
     color: var(--linkColor);
     transition: .3s;
   }
-  *::-webkit-scrollbar {
-    width: var(--scrollBarWidth);
-  }
-  *::-webkit-scrollbar-track {
-    background: var(--scrollBarTrack);
-  }
-  *::-webkit-scrollbar-thumb {
-    background-color: var(--scrollBarThumb);
-  }
 
   /* Prism highlighting */
   /* Code blocks */
