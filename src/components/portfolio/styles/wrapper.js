@@ -8,7 +8,6 @@ const wrapper = css`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   ${mq({
     width: ['calc(v100vww - 2rem)', 'calc(100vw - 4rem)', 'calc(100vw - 8rem)', ],
     height: ['calc(100vh - 2rem)', 'calc(100vh - 4rem)', 'calc(100vh - 8rem)', ],

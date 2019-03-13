@@ -8,6 +8,7 @@ const slider = css`
   ${mq({
     width: ['100%', '100%', '85%']
   })}
+  align-self: center;
   article {
     display: flex;
     ${mq({

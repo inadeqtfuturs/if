@@ -8,6 +8,7 @@ const home = css`
   ${mq({
     width: ['100%', '100%', '65%'],
   })}
+  align-self: center;
   .title:after {
     border-bottom: 1px solid var(--linkColor);
     width: 4rem;

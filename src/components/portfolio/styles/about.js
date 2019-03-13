@@ -10,6 +10,7 @@ const about = css`
     flexDirection: ['column-reverse', 'row', 'row'],
     overflow: ['scroll', 'auto', 'auto'],
   })}
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
