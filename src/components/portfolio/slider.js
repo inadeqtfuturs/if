@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import style from './styles/slider';
 
@@ -40,18 +41,25 @@ class Slider extends React.Component {
 
     return (
       <section className={themeStyle}>
-        <article>
-          <figure>
-            <Img fluid={current.image.childImageSharp.fluid} />
-          </figure>
-          <header>
-            <h1>{current.title}</h1>
-            <p>{current.description}</p>
-            <h4>tech:</h4>
-            <p>{current.tech}</p>
-            <a href={current.link}>take a closer look  <FontAwesomeIcon icon={['fas', 'arrow-right']} /></a>
-          </header>
-        </article>
+        <TransitionGroup className="article">
+          <CSSTransition
+            key={current.title}
+            timeout={500}
+            classNames="fade">
+            <article>
+              <figure>
+                <Img fluid={current.image.childImageSharp.fluid} />
+              </figure>
+              <header>
+                <h1>{current.title}</h1>
+                <p>{current.description}</p>
+                <h4>tech:</h4>
+                <p>{current.tech}</p>
+                <a href={current.link}>take a closer look  <FontAwesomeIcon icon={['fas', 'arrow-right']} /></a>
+              </header>
+            </article>
+          </CSSTransition>
+        </TransitionGroup>
         <footer>
           <nav>
             <button onClick={this.prev}>back</button>
