@@ -29,10 +29,12 @@ const slider = css`
       figure {
         flex-basis: 65%;
         width: 100%;
-        box-shadow: -5px 0px 15px 1px #aaaaaa;
         ${mq({
           marginBottom: ['1rem', '1.5rem', '0'],
         })}
+        .gatsby-image-wrapper {
+          box-shadow: -5px 0px 15px 1px #aaaaaa;
+        }
       }
       header {
         flex-basis: 25%;
