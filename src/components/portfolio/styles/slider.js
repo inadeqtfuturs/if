@@ -15,7 +15,6 @@ const slider = css`
     position: relative;
     min-height: 62vh;
     width: 100%;
-    display: block;
     article {
       position: absolute;
       height: 100%;

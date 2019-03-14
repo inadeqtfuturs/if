@@ -5,7 +5,7 @@ const header = css`
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 1rem;
+  height: 5vh;
   a {
     text-decoration: none;
   }

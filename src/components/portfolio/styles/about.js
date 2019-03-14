@@ -16,6 +16,9 @@ const about = css`
   justify-content: space-between;
   article {
     flex-basis: 50%;
+    section {
+      position: inherit !important; 
+    }
     h1 {
       ${mq({
         fontSize: ['1.25rem', '1.5rem', '2.5rem'],
@@ -65,9 +68,9 @@ const about = css`
   }
   figure {
     flex-basis: 40%;
-    width: 100%;
     ${mq({
-      marginBottom: ['1rem', '0', '0'],
+      width: ['60%', '100%', '100%'],
+      marginBottom: ['.5rem', '0', '0'],
     })}
 `;
 

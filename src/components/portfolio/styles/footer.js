@@ -4,13 +4,13 @@ const footer = css`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1rem;
+  align-items: flex-end;
+  height: 5vh;
   a {
     text-decoration: none;
   }
   section a {
     margin-right: 1rem;
-
   }
 
 `;

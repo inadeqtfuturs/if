@@ -1,19 +1,22 @@
 import { css } from 'emotion';
 import facepaint from 'facepaint';
 
-const breakpoints = [960];
-const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}px)`));
+const breakpoints = [40, 62];
+const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
 
 const portfolio = css`
-  .main-section {
-    background-color: red;
+  align-self: center;
+  display: grid;
+  width: 100%;
+  ${mq({
+    height: ['calc(90vh - 2rem)', 'calc(90vh - 4rem)', 'calc(90vh - 8rem)', ],
+  })}
+  .article {
     position: relative;
-    width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
     section {
       position: absolute;
-      height: 100%;
-      width: 100%;
     }
   }
   .main-fade-enter {
@@ -21,7 +24,7 @@ const portfolio = css`
   }
   .main-fade-enter.main-fade-enter-active {
       opacity: 1;
-      transition: opacity 5000ms ease 5000ms;
+      transition: opacity 500ms ease 500ms;
   }
   .main-fade-enter-done {
     opacity: 1;
@@ -32,7 +35,7 @@ const portfolio = css`
   }
   .main-fade-exit.main-fade-exit-active {
       opacity: 0;
-      transition: opacity 5000ms ease;
+      transition: opacity 500ms ease;
   }
   .main-fade-exit-done {
     opacity: 0;

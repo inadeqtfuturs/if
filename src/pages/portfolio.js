@@ -1,6 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+import style from '../components/portfolio/styles/portfolio';
 
 import About from '../components/portfolio/about';
 import Footer from '../components/portfolio/footer';
@@ -32,30 +35,39 @@ class Portfolio extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, themeStyle=style } = this.props;
 
-    // let { edges: projects } = data.allMarkdownRemark;
-    // posts = posts.map(post => post.node);
-    let projects = data.allMarkdownRemark.edges;
+    const projects = data.allMarkdownRemark.edges;
 
     return (
       <Wrapper>
         <Header />
-          {
-            this.state.active === 'home' && <Home
-                                              toPortfolio={this.toPortfolio}
-                                              toAbout={this.toAbout} />
-          }
-          {
-            this.state.active === 'portfolio' && <Slider
-                                                  toHome={this.toHome}
-                                                  toAbout={this.toAbout}
-                                                  projects={projects} />
-          }
-          {
-            this.state.active === 'about' && <About
-                                              toPortfolio={this.toPortfolio} />
-          }
+          <div className={themeStyle}>
+          <TransitionGroup className="article">
+            <CSSTransition
+              key={this.state.active}
+              timeout={1000}
+              classNames="main-fade">
+                <>
+                {
+                  this.state.active === 'home' && <Home
+                                                    toPortfolio={this.toPortfolio}
+                                                    toAbout={this.toAbout} />
+                }
+                {
+                  this.state.active === 'portfolio' && <Slider
+                                                        toHome={this.toHome}
+                                                        toAbout={this.toAbout}
+                                                        projects={projects} />
+                }
+                {
+                  this.state.active === 'about' && <About
+                                                    toPortfolio={this.toPortfolio} />
+                }
+              </>
+            </CSSTransition>
+          </TransitionGroup>
+          </div>
         <Footer />
         <SEO />
       </Wrapper>

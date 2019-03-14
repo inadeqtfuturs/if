@@ -9,7 +9,7 @@ const wrapper = css`
   flex-direction: column;
   justify-content: space-between;
   ${mq({
-    width: ['calc(v100vww - 2rem)', 'calc(100vw - 4rem)', 'calc(100vw - 8rem)', ],
+    width: ['calc(100vww - 2rem)', 'calc(100vw - 4rem)', 'calc(100vw - 8rem)', ],
     height: ['calc(100vh - 2rem)', 'calc(100vh - 4rem)', 'calc(100vh - 8rem)', ],
     margin: ['1rem', '2rem', '4rem']
   })}
