@@ -3,11 +3,11 @@ import React from 'react';
 import style from './styles/header';
 
 const Header = props => {
-  const { themeStyle=style } = props;
+  const { toHome, themeStyle=style } = props;
 
   return (
     <header className={themeStyle}>
-      <a href='/portfolio'><h1>if.</h1></a>
+      <button onClick={toHome}><h1>if.</h1></button>
       <a href='/code'>blog</a>
     </header>
   );

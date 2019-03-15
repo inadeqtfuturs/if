@@ -36,39 +36,38 @@ class Slider extends React.Component {
 
   render() {
 
-    const { toHome, toAbout, projects, themeStyle=style } = this.props;
+    const { toAbout, projects, themeStyle=style } = this.props;
     const current = projects[this.state.activeProject].node.frontmatter;
 
     return (
       <section className={themeStyle}>
-        <TransitionGroup className="article">
-          <CSSTransition
-            key={current.title}
-            timeout={500}
-            classNames="fade">
-            <article>
-              <figure>
-                <Img fluid={current.image.childImageSharp.fluid} />
-              </figure>
-              <header>
-                <h1>{current.title}</h1>
-                <p>{current.description}</p>
-                <h4>tech:</h4>
-                <p>{current.tech}</p>
-                <a href={current.link}>take a closer look  <FontAwesomeIcon icon={['fas', 'arrow-right']} /></a>
-              </header>
-            </article>
-          </CSSTransition>
-        </TransitionGroup>
-        <footer>
-          <nav>
-            <button onClick={this.prev}>back</button>
-            <button onClick={this.next}>next</button>
+        <div>
+          <nav className='portfolio-nav'>
+            <button onClick={this.prev}><FontAwesomeIcon icon={['fas', 'chevron-left']} /></button>
+            <button onClick={this.next}><FontAwesomeIcon icon={['fas', 'chevron-right']} /></button>
           </nav>
-          <nav>
-            <button onClick={toHome}>home</button>
-            <button onClick={toAbout}>about</button>
-          </nav>
+          <TransitionGroup className="article">
+            <CSSTransition
+              key={current.title}
+              timeout={500}
+              classNames="fade">
+              <article>
+                <figure>
+                  <Img fluid={current.image.childImageSharp.fluid} />
+                </figure>
+                <header>
+                  <h1>{current.title}</h1>
+                  <p>{current.description}</p>
+                  <h4>tech:</h4>
+                  <p>{current.tech}</p>
+                  <a href={current.link}>take a closer look  <FontAwesomeIcon icon={['fas', 'arrow-right']} /></a>
+                </header>
+              </article>
+            </CSSTransition>
+          </TransitionGroup>
+        </div>
+        <footer> 
+          <button onClick={toAbout}>about</button>
         </footer>
       </section>
     )

@@ -41,7 +41,8 @@ class Portfolio extends React.Component {
 
     return (
       <Wrapper>
-        <Header />
+        <Header 
+          toHome={this.toHome} />
           <div className={themeStyle}>
           <TransitionGroup className="article">
             <CSSTransition
@@ -56,7 +57,6 @@ class Portfolio extends React.Component {
                 }
                 {
                   this.state.active === 'portfolio' && <Slider
-                                                        toHome={this.toHome}
                                                         toAbout={this.toAbout}
                                                         projects={projects} />
                 }

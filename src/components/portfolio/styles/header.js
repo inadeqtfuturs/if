@@ -9,6 +9,10 @@ const header = css`
   a {
     text-decoration: none;
   }
+  button {
+    border-color: transparent;
+    background: transparent;
+  }
 `;
 
 export default header;
