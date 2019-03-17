@@ -6,6 +6,7 @@ const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
 
 const slider = css`
   align-self: center;
+  height: 100%;
   ${mq({
     width: ['100%', '100%', '85%']
   })}
@@ -57,7 +58,7 @@ const slider = css`
             }
           }
           h4 {
-            margin-bottom: 0rem;
+            margin-bottom: 0;
             ${mq({
               fontSize: ['.75rem', '.85rem', '.85rem'],
             })}
@@ -73,7 +74,7 @@ const slider = css`
             text-decoration: none;
             padding: .5rem 2rem;
             ${mq({
-              margin: ['.5rem 0rem', '1rem 0rem', '1rem 0rem'],
+              margin: ['.5rem .5rem .5rem 0', '1rem 1rem 1rem 0', '1rem 1rem 1rem 0'],
               fontSize: ['.75rem', '1rem', '1rem'],
             })}
             transition: all .5s ease-in-out;
@@ -99,14 +100,14 @@ const slider = css`
     button {
       ${mq({
         padding: ['1rem .5rem', '4rem .5rem', '.5rem 2rem'],
-        margin: ['.5rem 0rem', '1rem 0rem', '1rem 0rem'],
+        margin: ['.5rem 0', '1rem 0', '0'],
         fontSize: ['.75rem', '1rem', '1rem'],
       })}
       transition: all .5s ease-in-out;
       color: var(--linkColor);
       background: var(--lightTextColor);
       border: 1px solid var(--lightTextColor);
-      opacity: .5;
+      opacity: .4;
       &:hover {
         opacity: .8;
       }
@@ -116,11 +117,12 @@ const slider = css`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     button {
       padding: .5rem 2rem;
       background: none;
       ${mq({
-        margin: ['.5rem 0rem', '1rem 0rem', '1rem 0rem'],
+        margin: ['.5rem 0', '1rem 0', '1rem 0'],
         fontSize: ['.75rem', '1rem', '1rem'],
       })}
       transition: all .5s ease-in-out;

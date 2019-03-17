@@ -60,7 +60,8 @@ class Slider extends React.Component {
                   <p>{current.description}</p>
                   <h4>tech:</h4>
                   <p>{current.tech}</p>
-                  <a href={current.link}>take a closer look  <FontAwesomeIcon icon={['fas', 'arrow-right']} /></a>
+                  <a href={current.link}>live</a>
+                  {current.code && <a href={current.code}>code</a>}
                 </header>
               </article>
             </CSSTransition>

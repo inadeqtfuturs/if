@@ -10,6 +10,7 @@ const about = css`
     flexDirection: ['column-reverse', 'row', 'row'],
     overflow: ['scroll', 'auto', 'auto'],
   })}
+  height: 100%;
   align-self: center;
   display: flex;
   align-items: center;
@@ -52,7 +53,7 @@ const about = css`
       padding: .5rem 2rem;
       background: none;
       ${mq({
-        margin: ['.5rem 0rem', '1rem .5rem', '1rem .5rem'],
+        margin: ['.5rem 0', '1rem 0', '1rem 0'],
         fontSize: ['.75rem', '1rem', '1rem'],
       })}
       transition: all .5s ease-in-out;
@@ -68,8 +69,8 @@ const about = css`
   }
   figure {
     flex-basis: 40%;
+    width: 100%;
     ${mq({
-      width: ['60%', '100%', '100%'],
       marginBottom: ['.5rem', '0', '0'],
     })}
 `;

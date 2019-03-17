@@ -92,6 +92,7 @@ export const query = graphql`
             title
             description
             tech
+            code
             link
             image {
               childImageSharp {
