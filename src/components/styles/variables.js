@@ -4,17 +4,18 @@ import { injectGlobal } from 'emotion';
 
 const variables = injectGlobal`
   :root {
-    --textColor: #111;
-    --lightTextColor: #ddd;
-    --superLightTextColor: #eee;
+    --textColor: #333;
+    --lightTextColor: #ccc;
+    --superLightTextColor: #ddd;
 
     --linkColor: #666;
     --hoverLinkColor: #555;
+    --shadowColor: #aaa;
 
     --fontFamily: "Open Sans", sans-serif;
     --fontFamilyPara: "Georgia";
 
-    --backgroundColor: #fff;
+    --backgroundColor: #fcfcfc;
 
     --scrollBarThumb: #eaeaea;
     --scrollBarTrack: #f9f9f9;

@@ -40,7 +40,7 @@ const slider = css`
             marginBottom: ['1rem', '1.5rem', '0'],
           })}
           .gatsby-image-wrapper {
-            box-shadow: -5px 0px 15px 1px #aaaaaa;
+            box-shadow: -5px 0px 10px 1px var(--shadowColor);
           }
         }
         header {
@@ -78,13 +78,10 @@ const slider = css`
               fontSize: ['.75rem', '1rem', '1rem'],
             })}
             transition: all .5s ease-in-out;
-            border: 1px solid var(--linkColor);
+            border: 1px solid var(--lightTextColor);
             color: var(--linkColor);
             &:hover {
-              color: var(--linkColor);
-              border: 1px solid var(--textColor);
-              background: var(--backgroundColor);
-              opacity: 1;
+              border: 1px solid var(--linkColor);
             }
           }
         }
@@ -103,6 +100,7 @@ const slider = css`
         margin: ['.5rem 0', '1rem 0', '0'],
         fontSize: ['.75rem', '1rem', '1rem'],
       })}
+      cursor: pointer;
       transition: all .5s ease-in-out;
       color: var(--linkColor);
       background: var(--lightTextColor);
@@ -125,6 +123,7 @@ const slider = css`
         margin: ['.5rem 0', '1rem 0', '1rem 0'],
         fontSize: ['.75rem', '1rem', '1rem'],
       })}
+      cursor: pointer;
       transition: all .5s ease-in-out;
       border: 1px solid var(--linkColor);
       color: var(--linkColor);

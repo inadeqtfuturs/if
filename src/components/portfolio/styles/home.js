@@ -23,14 +23,12 @@ const home = css`
     ${mq({
       fontSize: ['.75rem', '1rem', '1rem'],
     })}
+    cursor: pointer;
     transition: all .5s ease-in-out;
-    border: 1px solid #a0a0a0;
-    color: #666;
+    border: 1px solid var(--lightTextColor);
+    color: var(--linkColor);
     &:hover {
-      color: #666;
-      border: 1px solid #111;
-      background: #fff;
-      opacity: 1;
+      border: 1px solid var(--linkColor);
     }
   }
 `;

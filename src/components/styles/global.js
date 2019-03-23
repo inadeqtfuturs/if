@@ -8,7 +8,7 @@ const global = injectGlobal`
   html {
     box-sizing: border-box;
     font-size: 16px;
-    color: var(--linkColor);
+    color: var(--textColor);
     background-color: var(--backgroundColor);
   }
   *,
