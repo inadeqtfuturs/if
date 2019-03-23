@@ -30,7 +30,11 @@ const Footer = props => {
           <FontAwesomeIcon icon={['fab', 'codepen']} size='lg' />
         </a>
       </section>
-      <a href='mailto:alexj.christie@gmail.com'>contact</a>
+      <section className={'links'}>
+        <a href='/code'>blog</a>
+        {` // `}
+        <a href='mailto:alexj.christie@gmail.com'>contact</a>
+      </section>
     </footer>
   );
 };

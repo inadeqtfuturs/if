@@ -42,7 +42,6 @@ class Portfolio extends React.Component {
   }
   toggleTheme() {
     this.setState({ dark: !this.state.dark });
-    console.log(this.state.dark);
   }
 
   render() {
@@ -51,42 +50,41 @@ class Portfolio extends React.Component {
     const projects = data.allMarkdownRemark.edges;
 
     return (
-      <ThemeWrapper
-        dark={this.state.dark}>
-        <Wrapper>
-          <Header 
-            toHome={this.toHome}
-            toggleTheme={this.toggleTheme}
-            dark={this.state.dark} />
-            <div className={themeStyle}>
-            <TransitionGroup className="article">
-              <CSSTransition
-                key={this.state.active}
-                timeout={1000}
-                classNames="main-fade">
-                  <>
-                  {
-                    this.state.active === 'home' && <Home
-                                                      toPortfolio={this.toPortfolio}
-                                                      toAbout={this.toAbout} />
-                  }
-                  {
-                    this.state.active === 'portfolio' && <Slider
-                                                          toAbout={this.toAbout}
-                                                          projects={projects} />
-                  }
-                  {
-                    this.state.active === 'about' && <About
-                                                      toPortfolio={this.toPortfolio} />
-                  }
-                </>
-              </CSSTransition>
-            </TransitionGroup>
-            </div>
-          <Footer />
-          <SEO />
-        </Wrapper>
-      </ThemeWrapper>
+      <Wrapper>
+        <ThemeWrapper
+        dark={this.state.dark} />
+        <Header 
+          toHome={this.toHome}
+          toggleTheme={this.toggleTheme}
+          dark={this.state.dark} />
+          <div className={themeStyle}>
+          <TransitionGroup className="article">
+            <CSSTransition
+              key={this.state.active}
+              timeout={1000}
+              classNames="main-fade">
+                <>
+                {
+                  this.state.active === 'home' && <Home
+                                                    toPortfolio={this.toPortfolio}
+                                                    toAbout={this.toAbout} />
+                }
+                {
+                  this.state.active === 'portfolio' && <Slider
+                                                        toAbout={this.toAbout}
+                                                        projects={projects} />
+                }
+                {
+                  this.state.active === 'about' && <About
+                                                    toPortfolio={this.toPortfolio} />
+                }
+              </>
+            </CSSTransition>
+          </TransitionGroup>
+          </div>
+        <Footer />
+        <SEO />
+      </Wrapper>
     );
   }
 }

@@ -12,6 +12,9 @@ const footer = css`
   section a {
     margin-right: 1rem;
   }
+  .links a {
+    margin-right: 0;
+  }
 
 `;
 
