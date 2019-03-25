@@ -53,8 +53,8 @@ draft: false
 ###Publications
 ---
 - Forthcoming: 'Sustainability and the Posthumanities.' Co-authored with Katie Dyson. *Mission Driven: Reimagining Graduate Education for a Thriving Humanities Ecosystem*. Ed. Stacy Hartman and Jenny Strakovsky. Modern Language Association of America.
-- Under consideration at *Configurations*: '"flying at our hand": Towards and Ethics of Intra-Active Responsibility.'
-- 2018: '[Review of Stacy Aliamo's *Exposed*](http://asapjournal.com/stacy-alaimos-exposed-environmental-politics-and-pleasures-in-posthuman-times-alex-christie/).' *ASAP/Journal*. January 2018 (online).
+- Under consideration at *Configurations*: '"flying at our hand": Towards an Ethics of Intra-Active Responsibility.'
+- 2018: '[Review of Stacy Alaimo's *Exposed*](http://asapjournal.com/stacy-alaimos-exposed-environmental-politics-and-pleasures-in-posthuman-times-alex-christie/).' *ASAP/Journal*. January 2018 (online).
 - 2017: '[Smooth Talk](http://reallifemag.com/smooth-talk/).' *Real Life Mag*. November 2017 (online)
 
 ###Presentations
