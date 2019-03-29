@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import Main from '../components/main';
 import Layout from '../components/layout';
@@ -6,7 +7,7 @@ import PostExcerpt from '../components/postExcerpt';
 import SEO from '../components/seo';
 import TagPagination from '../components/tagPagination';
 
-export default ({ pageContext }) => {
+const TagPage = ({ pageContext }) => {
   const { posts, tag, pagesSum, page } = pageContext;
 
   return (
@@ -34,3 +35,12 @@ export default ({ pageContext }) => {
     </Layout>
   );
 };
+
+TagPage.propTypes = {
+  posts: PropTypes.object,
+  tag: PropTypes.string,
+  pagesSum: PropTypes.number,
+  page: PropTypes.number
+}
+
+export default TagPage;

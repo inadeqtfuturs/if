@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -30,5 +31,12 @@ const MenuItem = ({ item }) => {
         : ( <li key={label}><Link to={to}>{label}</Link></li> )
   )
 };
+
+MenuItem.propTypes = {
+  item: PropTypes.object,
+  label: PropTypes.string,
+  to: PropTypes.string,
+  subItem: PropTypes.object
+}
 
 export default MenuItem;

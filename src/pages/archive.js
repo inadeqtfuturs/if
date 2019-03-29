@@ -29,6 +29,7 @@ const ArchivePage = ({ data }) => {
 
 ArchivePage.propTypes = {
   data: PropTypes.object,
+  posts: PropTypes.object
 };
 
 export default ArchivePage;

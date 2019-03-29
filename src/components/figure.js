@@ -7,9 +7,6 @@ import facepaint from 'facepaint';
 const Figure = props => {
   const { image, width } = props;
 
-  console.log(typeof(image))
-  console.log(typeof(width))
-
   const breakpoints = [30, 40, 62];
   const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}rem)`));
   const pageImage = css`

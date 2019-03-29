@@ -1,6 +1,5 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const Promise = require('bluebird');
 const _ = require(`lodash`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -224,7 +223,7 @@ function createPaginationCode(createPage, edges, pathPrefix) {
   for (let page = 1; page <= pagesSum; page++) {
     createPage({
       path: page === 1
-        ? `/code`
+        ? `${pathPrefix}`
         : `${pathPrefix}/${page}`,
       component: indexPage,
       context: {

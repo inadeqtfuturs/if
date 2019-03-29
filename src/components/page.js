@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Figure from './figure';
 
@@ -23,5 +24,10 @@ const Page = props => {
     </article>
   );
 };
+
+Page.propTypes = {
+  title: PropTypes.string,
+  html: PropTypes.string,
+}
 
 export default Page;

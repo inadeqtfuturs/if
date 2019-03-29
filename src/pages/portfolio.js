@@ -57,7 +57,7 @@ class Portfolio extends React.Component {
           toHome={this.toHome}
           toggleTheme={this.toggleTheme}
           dark={this.state.dark} />
-          <div className={themeStyle}>
+        <div className={themeStyle}>
           <TransitionGroup className="article">
             <CSSTransition
               key={this.state.active}
@@ -81,7 +81,7 @@ class Portfolio extends React.Component {
               </>
             </CSSTransition>
           </TransitionGroup>
-          </div>
+        </div>
         <Footer />
         <SEO />
       </Wrapper>
@@ -91,6 +91,7 @@ class Portfolio extends React.Component {
 
 Portfolio.propTypes = {
   data: PropTypes.object,
+  projects: PropTypes.object
 };
 
 export default Portfolio;

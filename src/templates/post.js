@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Main from '../components/main';
 import Post from '../components/post';
@@ -8,7 +9,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TagList from '../components/tagList';
 
-export default ({ data }) => {
+const PostTemplate = ({ data }) => {
 
   const {
     nextPost: next,
@@ -26,7 +27,7 @@ export default ({ data }) => {
         width
       },
       fields: {
-        slug,
+        slug
       },
     },
   } = data;
@@ -59,6 +60,20 @@ export default ({ data }) => {
     </Layout>
   );
 };
+
+PostTemplate.propTypes = {
+  title: PropTypes.string,
+  date: PropTypes.string,
+  author: PropTypes.string,
+  html: PropTypes.string,
+  tags: PropTypes.array,
+  slug: PropTypes.string,
+  next: PropTypes.object,
+  previous: PropTypes.object,
+  excerpt: PropTypes.string
+}
+
+export default PostTemplate;
 
 export const query = graphql`
   query PostQuery($slug: String!, $nextPostPath: String!, $prevPostPath: String!) {

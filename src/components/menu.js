@@ -1,5 +1,6 @@
 import React from 'react';
 import { cx } from 'emotion'
+import PropTypes from 'prop-types'
 
 import style from './styles/menu';
 
@@ -41,5 +42,9 @@ class Menu extends React.Component {
     );
   };
 };
+
+Menu.propTypes = {
+  item: PropTypes.object
+}
 
 export default Menu;

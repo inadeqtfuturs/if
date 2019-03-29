@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Figure from './figure';
 
@@ -24,5 +25,12 @@ const Post = props => {
     </article>
   );
 };
+
+Post.propTypes = {
+  title: PropTypes.string,
+  date: PropTypes.string,
+  author: PropTypes.string,
+  html: PropTypes.string,
+}
 
 export default Post;

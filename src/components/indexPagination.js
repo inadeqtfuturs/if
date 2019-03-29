@@ -9,18 +9,22 @@ const IndexPagination = props => {
 
   return (
     <nav className={themeStyle}>
-      {prevPath ? (
-        <Link
-          to={prevPath === '/page/1' ? '/' : prevPath}>
-          newer
-        </Link>
-      ) : <span></span>}
-      {nextPath ? (
-        <Link
-          to={nextPath}>
-          older
-        </Link>
-      ) : <span></span>}
+      {prevPath 
+        ? (
+          <Link
+            to={prevPath === '/page/1' ? '/' : prevPath}>
+            newer
+          </Link>
+          ) 
+        : <span />}
+      {nextPath 
+        ? (
+          <Link
+            to={nextPath}>
+            older
+          </Link>
+          ) 
+        : <span />}
     </nav>
   );
 };

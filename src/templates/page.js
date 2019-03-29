@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Page from '../components/page';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-export default ({ data }) => {
+const PageTemplate = ({ data }) => {
   const {
     markdownRemark: {
       html,
@@ -40,6 +41,15 @@ export default ({ data }) => {
     </Layout>
   );
 };
+
+PageTemplate.propTypes = {
+  title: PropTypes.string,
+  html: PropTypes.string,
+  slug: PropTypes.string,
+  excerpt: PropTypes.string
+}
+
+export default PageTemplate;
 
 export const query = graphql`
   query PageQuery($slug: String!) {

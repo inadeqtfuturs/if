@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Main from '../components/main';
 import Layout from '../components/layout';
@@ -59,12 +60,16 @@ class SearchPage extends Component {
   }
 }
 
+SearchPage.propTypes = {
+  term: PropTypes.string,
+  posts: PropTypes.object
+};
+
 export default SearchPage;
 
 export const pageQuery = graphql`
   query SearchQuery {
     allMarkdownRemark(
-      limit: 10
       sort: { order: DESC, fields: [frontmatter___date]},
       filter: {frontmatter: { type: { eq:"post" } } },
     ) {

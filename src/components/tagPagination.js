@@ -9,16 +9,20 @@ const TagPagination = ({ tag, page, pagesSum }, props) => {
 
   return (
     <nav className={themeStyle}>
-      {page === 2 && (
-        <Link to={`/tag/${tag}/`}>newer</Link>
-      )}
-      {page > 2 && (
-        <Link to={`/tag/${tag}/${page - 1}`}>
-        newer</Link>
-      )}
-      {page < pagesSum && (
-        <Link to={`/tag/${tag}/${page + 1}/`}>older</Link>
-      )}
+      {page >= 2
+        ? page === 2
+          ? (
+            <Link to={`/tag/${tag}/`}>newer</Link>
+            ) 
+          : (
+            <Link to={`/tag/${tag}/${page - 1}`}>newer</Link>
+            ) 
+        : <span />}
+      {page < pagesSum 
+        ? (
+          <Link to={`/tag/${tag}/${page + 1}/`}>older</Link>
+          )
+        : <span />}
     </nav>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 import style from './styles/footerSocial';
 
@@ -20,5 +21,12 @@ const FooterSocial = props => {
     </div>
   );
 };
+
+FooterSocial.propTypes = {
+  times: PropTypes.object,
+  item: PropTypes.object,
+  label: PropTypes.string,
+  to: PropTypes.string,
+}
 
 export default FooterSocial;
