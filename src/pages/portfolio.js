@@ -83,7 +83,10 @@ class Portfolio extends React.Component {
           </TransitionGroup>
         </div>
         <Footer />
-        <SEO />
+        <SEO 
+          title={`portfolio`}
+          description={`hi. i'm alex, and i'm passionate about building elegant, responsive, and speedy front ends.`}
+        />
       </Wrapper>
     );
   }
